@@ -1,0 +1,32 @@
+.totty-btn1 {
+    position: relative;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 999999999px;
+    overflow: hidden;
+}
+
+.totty-btn1 p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-wrap: nowrap;
+}
+.totty-btn1 p:nth-child(1) { top: -50%; }
+.totty-btn1:hover p:nth-child(1) { top: 50%; }
+.totty-btn1:hover p:nth-child(2) { top: 150%; }
+.totty-btn1:hover span { height: 100%; }
+
+.totty-btn1 span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    height: 0;
+    width: 100%;
+    background-color: white;
+}
