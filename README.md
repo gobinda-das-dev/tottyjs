@@ -1,6 +1,6 @@
 # Totty.js - Elevate Web Visuals Effortlessly
 
-![Shery.js Logo](https://raw.githubusercontent.com/gobinda-das-dev/tottyjs-media/main/images/totty%20js%20banner.jpg)
+![Totty.js Logo](https://raw.githubusercontent.com/gobinda-das-dev/tottyjs-media/main/images/totty%20js%20banner.jpg)
 
 Welcome to Totty.js, your gateway to a mesmerizing world of JavaScript-powered visuals. This cutting-edge library is meticulously crafted to elevate your web projects with captivating and immersive effects that leave a lasting impression.
 
@@ -10,6 +10,8 @@ Welcome to Totty.js, your gateway to a mesmerizing world of JavaScript-powered v
 2. [Installation](#installation)
 3. [Cool Effects](#cool-effects)
    - Button Hover
+4. [Table of Properties](#table-of-properties)
+   4.1 [About buttonHoverEffect](#about-buttonHoverEffect)
 
 Introducing Totty.js: Seamlessly integrate captivating 2D effects into your web apps. Stay tuned for upcoming 3D features! Under development.
 
@@ -47,3 +49,17 @@ Totty.buttonHoverEffect(".your-btn", {
     backgroundEase: "cubic-bezier(0.19, 1, 0.22, 1)",
 });
 ```
+
+
+
+
+
+
+
+
+# Table of Properties
+
+# About buttonHoverEffect
+| Option                  | Type      | Default                | Description                                                                                                                                                                                                                                                                                        |
+| ----------------------- | --------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `el`                    | `object`  | `document`             | Scroll container element.                                                                                                                                                                                                                                                                          |
