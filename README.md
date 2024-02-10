@@ -57,9 +57,14 @@ Totty.buttonHoverEffect(".your-btn", {
 
 
 
-# Table of Properties
-
-# About buttonHoverEffect
-| Option                  | Type      | Default                | Description                                                                                                                                                                                                                                                                                        |
-| ----------------------- | --------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `el`                    | `object`  | `document`             | Scroll container element.                                                                                                                                                                                                                                                                          |
+## Table of Properties
+|                     |                      | *buttonHoverEffect*  |                                   |                                                   |
+| ------------------- | -------------------- | -------------------- | --------------------------------- | ------------------------------------------------- |
+| Style               | Option               | Type                 | Default                           | Description                                       |
+| 1                   | `color`              | `string`             | `gold`                            | Color of text inside the button.                  |
+|                     | `colorFrom`          | `string`             | `white`                           | Color of text that comes from top.                |
+|                     | `backgroundColor`    | `string`             | `royalblue`                       | Color of the background that comes from bottom.   |
+|                     | `ease`               | `string`             | `ease-in-out`                     | easeing of the texts that.                        |
+|                     | `backgroundEase`     | `string`             | `cubic-bezier(0.19, 1, 0.22, 1)`  | easing of background that comes from bottom.      |
+|                     | `duration`           | `string`             | `.5s`                             | duration of texts transition.                     |
+|                     | `backgroundDuration` | `string`             | `1s`                              | duration of backgroundColor.                      |
