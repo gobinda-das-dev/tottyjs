@@ -27,7 +27,7 @@ CDN  **of** `CSS`.
 
 ---
 
-Use **only** one `JAVASCRIP CDN`
+Use `JAVASCRIP CDN`.
 
 ```html
 <script src="https://gobinda-das-dev.github.io/tottyjs/js/totty.js"></script>
