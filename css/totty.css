@@ -7,6 +7,7 @@
     outline: none;
     border-radius: 999999999px;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 .totty-btn1 p {

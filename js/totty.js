@@ -3,34 +3,41 @@ const Totty = {
 };
 
 function buttonHoverEffect(e, properties) {
-    const element = document.querySelector(e);
+    const elem = document.querySelectorAll(e);
 
-    properties.style = properties.style || 1;
+    elem.forEach(element => {
 
-    if (properties.style === 1) {
-        element.classList.add("totty-btn1");
+        properties = properties || {};
+        properties.style = properties.style || 1;
+    
+        if (properties.style === 1) {
+            element.classList.add("totty-btn1");
+    
+            const p1 = createElementWithText("p", element.textContent);
+            const p2 = createElementWithText("p", element.textContent);
+            const span = document.createElement("span");
 
-        const p1 = createElementWithText("p", element.textContent);
-        const p2 = createElementWithText("p", element.textContent);
-        const span = document.createElement("span");
+            for (const prop in properties) {
+                if (prop !== 'style' && prop !== 'ease' && prop !== 'duration' && prop !== 'backgroundEase' && prop !== 'backgroundDuration' && prop !== 'background_color' && prop !== 'colorFrom' && prop !== 'color') {
+                    element.style[prop] = properties[prop];
+                }
+            }
+    
+            p1.style.color = `${properties.colorFrom || 'royalblue'}`;
+            p2.style.color = `${properties.color || 'white'}`;
+    
+            p1.style.transition = `top ${properties.duration || '.5s'} ${properties.ease || 'ease-in-out'}`;
+            p2.style.transition = `top ${properties.duration || '.5s'} ${properties.ease || 'ease-in-out'}`;
 
-        p1.style.color = "royalblue";
-        p2.style.color = "white";
-
-        p1.style.transition = `top ${properties.duration || '.5s'} ${properties.ease || 'ease-in-out'}`;
-        p2.style.transition = `top ${properties.duration || '.5s'} ${properties.ease || 'ease-in-out'}`;
-
-        if (properties.backgroundEase || properties.backgroundDuration || properties.background_color) {
-            span.style.transition = `height ${properties.backgroundDuration || '1s'} ${properties.backgroundEase || 'cubic-bezier(0.19, 1, 0.22, 1)'} 0.2s`;
-            span.style.backgroundColor = properties.background_color || 'white';
-        } else {
-            span.style.transition = `height 1s cubic-bezier(0.19, 1, 0.22, 1) 0.2s`;
-            span.style.backgroundColor = 'white';
+            span.style.transition = `height ${properties.backgroundDuration || '1s'} ${properties.backgroundEase || 'cubic-bezier(0.19, 1, 0.22, 1)'}  ${properties.backgroundDelay || '0.2s'}`;
+            span.style.backgroundColor = `${properties.background_color || 'white'}`;
+             
+    
+            mpbS(p1, p2, span)
+            appendElements(element, [p1, p2, span]);
         }
+    })
 
-        mpbS(p1, p2, span)
-        appendElements(element, [p1, p2, span]);
-    }
 }
 
 function createElementWithText(tagName, text) {
