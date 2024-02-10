@@ -11,13 +11,14 @@ function buttonHoverEffect(e, properties) {
         properties.style = properties.style || 1;
 
         if (properties.style === 1) {
+            const excludedProps = ['style', 'colorFrom', 'color', 'ease', 'duration', 'backgroundEase', 'backgroundDuration', 'backgroundColor'];
 
             const p1 = createElementWithText("p", element.textContent);
             const p2 = createElementWithText("p", element.textContent);
             const span = document.createElement("span");
 
             for (const prop in properties) {
-                if (prop !== 'style' && prop !== 'colorFrom' && prop !== 'color' && prop !== 'ease' && prop !== 'duration' && prop !== 'backgroundEase' && prop !== 'backgroundDuration' && prop !== 'backgroundColor') {
+                if (!excludedProps.includes(prop)) {
                     element.style[prop] = properties[prop];
                 }
             }
