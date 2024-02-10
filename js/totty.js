@@ -36,6 +36,25 @@ function buttonHoverEffect(e, properties) {
             mpbS(p1, p2, span)
             appendElements(element, [p1, p2, span]);
         }
+        
+
+
+
+        else if (properties.style === 2) {
+            
+            const span1 = createElementWithText("span", element.textContent);
+            const span2 = document.createElement("span");
+
+
+            const p1 = createElementWithText("p", element.textContent);
+            const p2 = createElementWithText("p", element.textContent);
+
+            appendElements(span1, [p1, p2]);
+
+            mpbS(span1, span2, p1, p2);
+            appendElements(element, [span1, span2]);
+            element.classList.add("totty-btn2");
+        }
     })
 
 }

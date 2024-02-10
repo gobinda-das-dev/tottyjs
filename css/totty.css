@@ -1,3 +1,5 @@
+/* ---------------Button Hover Effect---------------- */
+/* style1 */
 .totty-btn1 {
     position: relative;
     padding: 5px 10px;
@@ -31,3 +33,62 @@
     width: 100%;
     background-color: white;
 }
+
+
+
+
+/* style2 */
+.totty-btn2 {
+    position: relative;
+    padding: 20px 40px;
+    background: transparent;
+    color: transparent;
+    outline: none;
+    border: .1px solid black;
+    border-radius: var(--borderRadious);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.totty-btn2 span:nth-child(1) {
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1;
+    overflow: hidden;
+}
+
+.totty-btn2 span p {
+    position: absolute;
+    left: 0;
+    transition: top .4s ease-in-out;
+}
+
+.totty-btn2 span p:nth-child(1) {
+    color: black;
+    top: 0;
+}
+
+.totty-btn2 span p:nth-child(2) {
+    color: white;
+    top: 100%;
+    z-index: 2;
+}
+
+.totty-btn2 span:nth-child(2) {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    border-radius: 50%;
+    background-color: black;
+    transition: border-radius .4s ease-in-out, height .4s ease-in-out;
+}
+
+.totty-btn2:hover span p:nth-child(1) { top: -100%; }
+.totty-btn2:hover span p:nth-child(2) { top: 0; }
+.totty-btn2:hover span:nth-child(2) { height: 100%; border-radius: 0px; }
