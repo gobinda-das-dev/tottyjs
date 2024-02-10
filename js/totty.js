@@ -23,14 +23,14 @@ function buttonHoverEffect(e, properties) {
                 }
             }
     
-            p1.style.color = `${properties.colorFrom || 'royalblue'}`;
-            p2.style.color = `${properties.color || 'white'}`;
+            p1.style.color = `${properties.colorFrom || 'white'}`;
+            p2.style.color = `${properties.color || 'gold'}`;
     
             p1.style.transition = `top ${properties.duration || '.5s'} ${properties.ease || 'ease-in-out'}`;
             p2.style.transition = `top ${properties.duration || '.5s'} ${properties.ease || 'ease-in-out'}`;
 
             span.style.transition = `height ${properties.backgroundDuration || '1s'} ${properties.backgroundEase || 'cubic-bezier(0.19, 1, 0.22, 1)'}  ${properties.backgroundDelay || '0.2s'}`;
-            span.style.backgroundColor = `${properties.background_color || 'white'}`;
+            span.style.backgroundColor = `${properties.background_color || 'royalblue'}`;
              
     
             mpbS(p1, p2, span)
