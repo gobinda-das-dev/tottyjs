@@ -11,9 +11,7 @@ Welcome to Totty.js, your gateway to a mesmerizing world of JavaScript-powered v
 3. [Cool Effects](#cool-effects)
    - Button Hover
 4. [Table of Properties](#table-of-properties)
-   4.1 [About buttonHoverEffect](#about-buttonHoverEffect)
 
-Introducing Totty.js: Seamlessly integrate captivating 2D effects into your web apps. Stay tuned for upcoming 3D features! Under development.
 
 ## Installation
 
@@ -34,9 +32,6 @@ Use `JAVASCRIP CDN`.
 
 
 ## Cool Effects
-
-These effects are implemented with the help of Gsap and CSS to offer a unique experience with a single function.
-
 ### Button Hover
 
 The feature creates a smooth button hover effect, creating an engaging user experience.
