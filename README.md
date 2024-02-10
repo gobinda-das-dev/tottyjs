@@ -63,3 +63,5 @@ Totty.buttonHoverEffect(".your-btn", {
 |                     | `backgroundEase`     | `string`             | `cubic-bezier(0.19, 1, 0.22, 1)`  | easing of background that comes from bottom.      |
 |                     | `duration`           | `string`             | `.5s`                             | duration of texts transition.                     |
 |                     | `backgroundDuration` | `string`             | `1s`                              | duration of backgroundColor.                      |
+|                     | `delay`              | `string`             | `0s`                              | delay of text transition.                         |
+|                     | `backgroundDelay`    | `string`             | `1s`                              | delay of background transition.                   |
