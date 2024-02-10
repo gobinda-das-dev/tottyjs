@@ -18,7 +18,7 @@ function buttonHoverEffect(e, properties) {
             const span = document.createElement("span");
 
             for (const prop in properties) {
-                if (prop !== 'style' && prop !== 'ease' && prop !== 'duration' && prop !== 'backgroundEase' && prop !== 'backgroundDuration' && prop !== 'background_color' && prop !== 'colorFrom' && prop !== 'color') {
+                if (prop !== 'style' && prop !== 'colorFrom' && prop !== 'color' && prop !== 'ease' && prop !== 'duration' && prop !== 'backgroundEase' && prop !== 'backgroundDuration' && prop !== 'background_color') {
                     element.style[prop] = properties[prop];
                 }
             }
