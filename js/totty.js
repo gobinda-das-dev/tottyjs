@@ -11,7 +11,6 @@ function buttonHoverEffect(e, properties) {
         properties.style = properties.style || 1;
 
         if (properties.style === 1) {
-            element.classList.add("totty-btn1");
 
             const p1 = createElementWithText("p", element.textContent);
             const p2 = createElementWithText("p", element.textContent);
@@ -35,6 +34,7 @@ function buttonHoverEffect(e, properties) {
 
             mpbS(p1, p2, span)
             appendElements(element, [p1, p2, span]);
+            element.classList.add("totty-btn1");
         }
         
 
