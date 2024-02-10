@@ -60,7 +60,7 @@ Totty.buttonHoverEffect(".your-btn", {
 ## Table of Properties
 |                     |                      | *buttonHoverEffect*  |                                   |                                                   |
 | ------------------- | -------------------- | -------------------- | --------------------------------- | ------------------------------------------------- |
-| Style               | Option               | Type                 | Default                           | Description                                       |
+| *Style*             | Option               | Type                 | Default                           | Description                                       |
 | 1                   | `color`              | `string`             | `gold`                            | Color of text inside the button.                  |
 |                     | `colorFrom`          | `string`             | `white`                           | Color of text that comes from top.                |
 |                     | `backgroundColor`    | `string`             | `royalblue`                       | Color of the background that comes from bottom.   |
