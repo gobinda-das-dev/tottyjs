@@ -40,7 +40,7 @@ The feature creates a smooth button hover effect, creating an engaging user expe
 Totty.buttonHoverEffect(".your-btn", {
     style: 1,   // 1 style available
     color: "gold",
-    backgroundColor: "royalblue"
+    backgroundColor: "royalblue",
     backgroundEase: "cubic-bezier(0.19, 1, 0.22, 1)",
 });
 ```
