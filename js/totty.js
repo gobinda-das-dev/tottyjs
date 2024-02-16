@@ -4,14 +4,17 @@ const Totty = {
 
 function buttonHoverEffect(e, properties) {
     const elem = document.querySelectorAll(e);
-    if (!elem) {
-        console.warn("Totty target he not found.");
+
+    properties = properties || {};
+    properties.style = properties.style || 1;
+
+    if (!elem.length) {
+        console.error("Uncaught Error: Totty target he not found.");
     }
+
 
     elem.forEach(element => {
 
-        properties = properties || {};
-        properties.style = properties.style || 1;
 
         if (properties.style === 1) {
             const customProps = ['style', 'colorFrom', 'color', 'ease', 'duration', 'backgroundEase', 'backgroundDuration', 'backgroundColor', 'delay', 'backgroundDelay'];
@@ -46,7 +49,7 @@ function buttonHoverEffect(e, properties) {
 
 
         else if (properties.style === 2) {
-            const customProps = ['style', 'color', 'colorFrom', 'backgroundColor', 'ease', 'backgroundEase', 'duration'];
+            const customProps = ['style', 'color', 'colorFrom', 'backgroundColor', 'ease', 'backgroundEase', 'duration', 'backgroundDuration'];
 
             const span1 = createElementWithText("span", element.textContent);
             const span2 = document.createElement("span");
@@ -78,6 +81,53 @@ function buttonHoverEffect(e, properties) {
             appendElements(element, [span1, span2]);
             element.classList.add("totty-btn2");
         }
+
+
+
+
+        else if (properties.style === 3) {
+
+            properties.subStyle = properties.subStyle || 1;
+            properties.cncl !== false && console.warn("style 3 has 6 other variants");
+
+
+            if (properties.subStyle = 1) {
+
+                const customProps = ['style', 'ease', 'duration', 'delay'];
+
+
+                const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                svg.appendChild(rect);
+
+
+
+                for (const prop in properties) {
+                    if (!customProps.includes(prop)) {
+                        element.style[prop] = properties[prop];
+                    }
+                }
+
+                rect.setAttribute("x", "0");
+                rect.setAttribute("y", "0");
+                rect.setAttribute("fill", "none");
+                rect.setAttribute("width", "100%");
+                rect.setAttribute("height", "100%");
+
+
+                element.style.transitionTimingFunction = properties.ease || 'ease';
+                element.style.transitionDuration = properties.duration || '0.6s';
+                element.style.transitionDelay = properties.delay || '0';
+
+
+                rect.style.stroke = properties.strokeColor || 'black';
+
+
+                appendElements(element, svg);
+                element.classList.add("totty-btn3-1");
+            }
+            element.classList.add("totty-btn3");
+        }
     })
 
 }
@@ -97,5 +147,6 @@ function mpbS(...element) {
 }
 
 function appendElements(parent, children) {
+    if (!Array.isArray(children)) children = [children];
     children.forEach(child => parent.appendChild(child));
 }
