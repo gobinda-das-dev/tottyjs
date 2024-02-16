@@ -1,7 +1,6 @@
 :root {
-    --borderRadious: 9999px;
+    --borderRadius: 9999px;
 }
-
 
 
 
@@ -21,7 +20,7 @@
     color: transparent;
     border: 1px solid royalblue;
     outline: none;
-    border-radius: var(--borderRadious);
+    border-radius: var(--borderRadius);
     overflow: hidden;
     white-space: nowrap;
 }
@@ -59,7 +58,7 @@
     color: transparent;
     outline: none;
     border: .1px solid black;
-    border-radius: var(--borderRadious);
+    border-radius: var(--borderRadius);
     overflow: hidden;
     white-space: nowrap;
 }
