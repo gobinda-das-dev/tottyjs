@@ -4,6 +4,9 @@ const Totty = {
 
 function buttonHoverEffect(e, properties) {
     const elem = document.querySelectorAll(e);
+    if (!elem) {
+        console.warn("Totty target he not found.");
+    }
 
     elem.forEach(element => {
 
