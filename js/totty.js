@@ -40,7 +40,7 @@ function buttonHoverEffect(e, properties) {
             span.style.backgroundColor = properties.backgroundColor || 'royalblue';
 
 
-            mpbS(p1, p2, span)
+            mpbS(p1, p2, span);
             appendElements(element, [p1, p2, span]);
             element.classList.add("totty-btn1");
         }
@@ -123,6 +123,7 @@ function buttonHoverEffect(e, properties) {
                 rect.style.stroke = properties.strokeColor || 'black';
 
 
+                mpbS(svg, rect);
                 appendElements(element, svg);
                 element.classList.add("totty-btn3-1");
             }
