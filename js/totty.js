@@ -30,14 +30,14 @@ function buttonHoverEffect(e, properties) {
                 }
             }
 
-            p1.style.color = `${properties.colorFrom || 'white'}`;
-            p2.style.color = `${properties.color || 'gold'}`;
+            p1.style.color = properties.colorFrom || 'white';
+            p2.style.color = properties.color || 'gold';
 
             p1.style.transition = `top ${properties.duration || '.5s'} ${properties.ease || 'ease-in-out'} ${properties.delay || '0s'}`;
             p2.style.transition = `top ${properties.duration || '.5s'} ${properties.ease || 'ease-in-out'} ${properties.delay || '0s'}`;
 
             span.style.transition = `height ${properties.backgroundDuration || '1s'} ${properties.backgroundEase || 'cubic-bezier(0.19, 1, 0.22, 1)'}  ${properties.backgroundDelay || '0.2s'}`;
-            span.style.backgroundColor = `${properties.backgroundColor || 'royalblue'}`;
+            span.style.backgroundColor = properties.backgroundColor || 'royalblue';
 
 
             mpbS(p1, p2, span)
@@ -67,13 +67,13 @@ function buttonHoverEffect(e, properties) {
                 }
             }
 
-            p1.style.color = `${properties.color || 'black'}`;
-            p2.style.color = `${properties.colorFrom || 'white'}`;
+            p1.style.color = properties.color || 'black';
+            p2.style.color = properties.colorFrom || 'white';
             p1.style.transition = `top ${properties.duration || '.4s'} ${properties.ease || 'ease-in-out'} ${properties.delay || '0s'}`;
             p2.style.transition = `top ${properties.duration || '.4s'} ${properties.ease || 'ease-in-out'} ${properties.delay || '0s'}`;
 
 
-            span2.style.backgroundColor = `${properties.backgroundColor || 'black'}`
+            span2.style.backgroundColor = properties.backgroundColor || 'black';
             span2.style.transition = `border-radius ${properties.backgroundDuration || '.4s'} ${properties.backgroundEase || 'ease-in-out'}, height .4s ${properties.backgroundEase || 'ease-in-out'} ${properties.delay || '0s'}`
 
 
