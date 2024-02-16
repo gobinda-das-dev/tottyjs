@@ -1,3 +1,17 @@
+:root {
+    --borderRadious: 9999px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* ---------------Button Hover Effect---------------- */
 /* style1 */
 .totty-btn1 {
@@ -7,7 +21,7 @@
     color: transparent;
     border: 1px solid royalblue;
     outline: none;
-    border-radius: 999999999px;
+    border-radius: var(--borderRadious);
     overflow: hidden;
     white-space: nowrap;
 }
