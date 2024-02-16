@@ -93,7 +93,7 @@ function buttonHoverEffect(e, properties) {
 
             if (properties.subStyle = 1) {
 
-                const customProps = ['style', 'ease', 'duration', 'delay'];
+                const customProps = ['style', 'ease', 'duration', 'delay', 'strokeColor'];
 
 
                 const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
