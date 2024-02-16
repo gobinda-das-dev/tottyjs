@@ -88,7 +88,7 @@ function buttonHoverEffect(e, properties) {
         else if (properties.style === 3) {
 
             properties.subStyle = properties.subStyle || 1;
-            properties.cncl !== false && console.warn("style 3 has 6 other variants");
+            properties.cncl !== false && console.warn("style 3 has 6 other subStyle");
 
 
             if (properties.subStyle = 1) {
