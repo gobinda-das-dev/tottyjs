@@ -20,6 +20,19 @@ function buttonHoverEffect(e, properties) {
         if (properties.style === 1) {
             const customProps = ['style', 'colorFrom', 'color', 'ease', 'duration', 'backgroundEase', 'backgroundDuration', 'backgroundColor', 'delay', 'backgroundDelay'];
 
+
+            const colorFrom = getProperty(properties.colorFrom, 'white');
+            const color = getProperty(properties.color, 'gold');
+            const duration = getProperty(properties.duration, '.5s');
+            const ease = getProperty(properties.ease, 'ease-in-out');
+            const delay = getProperty(properties.delay, '0s');
+            const backgroundDuration = getProperty(properties.backgroundDuration, '1s');
+            const backgroundEase = getProperty(properties.backgroundEase, 'cubic-bezier(0.19, 1, 0.22, 1)');
+            const backgroundDelay = getProperty(properties.backgroundDelay, '0.2s');
+            const backgroundColor = getProperty(properties.backgroundColor, 'royalblue');
+
+
+
             const p1 = createElementWithText("p", element.textContent);
             const p2 = createElementWithText("p", element.textContent);
             const span = document.createElement("span");
@@ -31,14 +44,14 @@ function buttonHoverEffect(e, properties) {
                 }
             }
 
-            p1.style.color = properties.colorFrom || 'white';
-            p2.style.color = properties.color || 'gold';
+            p1.style.color = colorFrom;
+            p2.style.color = color;
 
-            p1.style.transition = `top ${properties.duration || '.5s'} ${properties.ease || 'ease-in-out'} ${properties.delay || '0s'}`;
-            p2.style.transition = `top ${properties.duration || '.5s'} ${properties.ease || 'ease-in-out'} ${properties.delay || '0s'}`;
+            p1.style.transition = `top ${duration} ${ease} ${delay}`;
+            p2.style.transition = `top ${duration} ${ease} ${delay}`;
 
-            span.style.transition = `height ${properties.backgroundDuration || '1s'} ${properties.backgroundEase || 'cubic-bezier(0.19, 1, 0.22, 1)'}  ${properties.backgroundDelay || '0.2s'}`;
-            span.style.backgroundColor = properties.backgroundColor || 'royalblue';
+            span.style.transition = `height ${backgroundDuration} ${backgroundEase}  ${backgroundDelay}`;
+            span.style.backgroundColor = backgroundColor;
 
 
             mpbS(p1, p2, span);
