@@ -1,9 +1,9 @@
 const Totty = {
-    "buttonHoverEffect": buttonHoverEffect,
-    "navHamburgerEffect": navHamburgerEffect
+    "buttonHover": buttonHover,
+    "navHamburger": navHamburger
 };
 
-function buttonHoverEffect(e, properties) {
+function buttonHover(e, properties) {
     const elem = document.querySelectorAll(e);
 
     properties = properties || {};
@@ -163,7 +163,7 @@ function buttonHoverEffect(e, properties) {
 
 }
 
-function navHamburgerEffect(e, properties) {
+function navHamburger(e, properties) {
     const elem = document.querySelectorAll(e);
 
     properties = properties || {};
