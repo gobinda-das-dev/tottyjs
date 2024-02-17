@@ -1,5 +1,6 @@
 const Totty = {
-    "buttonHoverEffect": buttonHoverEffect
+    "buttonHoverEffect": buttonHoverEffect,
+    "navHamburgerEffect": navHamburgerEffect
 };
 
 function buttonHoverEffect(e, properties) {
@@ -133,12 +134,90 @@ function buttonHoverEffect(e, properties) {
 
 }
 
+function navHamburgerEffect(e, properties) {
+    const elem = document.querySelectorAll(e);
+
+    properties = properties || {};
+    properties.style = properties.style || 1;
+
+
+    if (!elem.length) {
+        console.error("Uncaught Error: Totty target he not found.");
+    }
+
+
+    elem.forEach(element => {
+
+
+
+        if (properties.style === 1) {
+            const customProps = ['style', 'duration', 'ease', 'delay', 'color', 'colorTo', 'height'];
+
+            const duration = getProperty(properties.duration, '0.4s');
+            const ease = getProperty(properties.ease, 'ease');
+            const delay = getProperty(properties.delay, '0');
+            const color = getProperty(properties.color, 'black');
+            const colorTo = getProperty(properties.colorTo, 'red');
+            const height = getProperty(properties.height, '2px');
+            const width = getProperty(properties.width, '36px');
+
+
+
+            const toggler = document.createElement("div");
+            const div1 = document.createElement("div");
+            const div2 = document.createElement("div");
+            const span1 = document.createElement("span");
+            const span2 = document.createElement("span");
+
+
+            for (const prop in properties) {
+                if (!customProps.includes(prop)) {
+                    element.style[prop] = properties[prop];
+                }
+            }
+
+
+            const arrEle = [div1, div2, span1, span2];
+            arrEle.forEach(e => {
+                e.style.transitionTimingFunction = ease;
+                e.style.transitionDuration = duration;
+                e.style.transitionDelay = delay;
+                e.style.height = height;
+            });
+
+
+            div1.style.backgroundColor = color;
+            div2.style.backgroundColor = colorTo;
+
+
+            toggler.style.width = width;
+
+
+            div1.appendChild(span1);
+            div1.appendChild(span2);
+            div2.appendChild(span1.cloneNode(true));
+            div2.appendChild(span2.cloneNode(true));
+            toggler.appendChild(div1);
+            toggler.appendChild(div2);
+
+
+            element.appendChild(toggler);
+            element.classList.add('totty-nav-toggler1');
+            element.addEventListener('click', (e) => {
+                e.currentTarget.classList.toggle('totty-nav-toggler1-is-active');
+            })
+        }
+    })
+}
+
+
+
+// Common Functions
 function createElementWithText(tagName, text) {
     const element = document.createElement(tagName);
     element.textContent = text;
     return element;
 }
-
 function mpbS(...element) {
     element.forEach(e => {
         e.style.margin = 0;
@@ -146,8 +225,10 @@ function mpbS(...element) {
         e.style.boxSizing = 'border-box'
     })
 }
-
 function appendElements(parent, children) {
     if (!Array.isArray(children)) children = [children];
     children.forEach(child => parent.appendChild(child));
+}
+function getProperty(property, defaultValue) {
+    return (property !== undefined && property !== null) ? property : defaultValue;
 }
