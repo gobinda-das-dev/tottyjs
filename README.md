@@ -44,6 +44,18 @@ Totty.buttonHover(".your-btn", {
     backgroundEase: "cubic-bezier(0.19, 1, 0.22, 1)",
 });
 ```
+### Nav Hamberger
+
+Use it to create a smooth and subtle navigation hamburger menu.
+
+```javascript
+Totty.navHamburger(".your-nav", {
+    style: 1,   // total 1 style available
+    color: "black",
+    backgroundColor: "red",
+    ease: "ease-in-out",
+});
+```
 
 
 
