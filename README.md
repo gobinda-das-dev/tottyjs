@@ -8,7 +8,7 @@ Welcome to Totty.js, your gateway to a mesmerizing world of JavaScript-powered v
 
 1. [Introduction](#introduction)
 2. [Installation](#installation)
-3. [Cool Effects](#cool-effects)
+3. [Cool s](#cool-effects)
    - Button Hover
 4. [Table of Properties](#table-of-properties)
 
@@ -31,13 +31,13 @@ Use `JAVASCRIP CDN`.
 ```
 
 
-## Cool Effects
+## Cool s
 ### Button Hover
 
 The feature creates a smooth button hover effect, creating an engaging user experience.
 
 ```javascript
-Totty.buttonHoverEffect(".your-btn", {
+Totty.buttonHover(".your-btn", {
     style: 1,   // total 2 styles available
     color: "gold",
     backgroundColor: "royalblue",
@@ -53,7 +53,7 @@ Totty.buttonHoverEffect(".your-btn", {
 
 
 ## Table of Properties
-|                      | *buttonHoverEffect*  |                                   |                                                   |
+|                      | *buttonHover*        |                                   |                                                   |
 | -------------------- | -------------------- | --------------------------------- | ------------------------------------------------- |
 | Option               | Type                 | Default                           | Description                                       |
 | `color`              | `string`             | `gold`                            | Color of text inside the button.                  |
