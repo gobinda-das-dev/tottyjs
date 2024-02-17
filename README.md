@@ -65,3 +65,4 @@ Totty.buttonHoverEffect(".your-btn", {
 | `backgroundDuration` | `string`             | `1s`                              | duration of backgroundColor.                      |
 | `delay`              | `string`             | `0s`                              | delay of text transition.                         |
 | `backgroundDelay`    | `string`             | `1s`                              | delay of background transition.                   |
+| `strokeColor`        | `string`             | `black`                           | color of border of style3(1) buttons.             |
