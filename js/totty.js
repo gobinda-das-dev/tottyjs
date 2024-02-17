@@ -63,7 +63,19 @@ function buttonHoverEffect(e, properties) {
 
 
         else if (properties.style === 2) {
-            const customProps = ['style', 'color', 'colorFrom', 'backgroundColor', 'ease', 'backgroundEase', 'duration', 'backgroundDuration'];
+            const customProps = ['style', 'color', 'colorFrom', 'backgroundColor', 'ease', 'backgroundEase', 'duration', 'backgroundDuration', 'delay', 'backgroundDelay'];
+
+            const color = getProperty(properties.color, 'black');
+            const colorFrom = getProperty(properties.colorFrom, 'white');
+            const duration = getProperty(properties.duration, '.4s');
+            const ease = getProperty(properties.ease, 'ease-in-out');
+            const delay = getProperty(properties.delay, '0s');
+            const backgroundColor = getProperty(properties.backgroundColor, 'black');
+            const backgroundDuration = getProperty(properties.backgroundDuration, '.4s');
+            const backgroundEase = getProperty(properties.backgroundEase, 'ease-in-out');
+            const backgroundDelay = getProperty(properties.backgroundDelay, '0s');
+
+
 
             const span1 = createElementWithText("span", element.textContent);
             const span2 = document.createElement("span");
@@ -81,14 +93,14 @@ function buttonHoverEffect(e, properties) {
                 }
             }
 
-            p1.style.color = properties.color || 'black';
-            p2.style.color = properties.colorFrom || 'white';
-            p1.style.transition = `top ${properties.duration || '.4s'} ${properties.ease || 'ease-in-out'} ${properties.delay || '0s'}`;
-            p2.style.transition = `top ${properties.duration || '.4s'} ${properties.ease || 'ease-in-out'} ${properties.delay || '0s'}`;
+            p1.style.color = color;
+            p2.style.color = colorFrom;
+            p1.style.transition = `top ${duration} ${ease} ${delay}`;
+            p2.style.transition = `top ${duration} ${ease} ${delay}`;
 
 
-            span2.style.backgroundColor = properties.backgroundColor || 'black';
-            span2.style.transition = `border-radius ${properties.backgroundDuration || '.4s'} ${properties.backgroundEase || 'ease-in-out'}, height .4s ${properties.backgroundEase || 'ease-in-out'} ${properties.delay || '0s'}`
+            span2.style.backgroundColor = backgroundColor;
+            span2.style.transition = `border-radius ${backgroundDuration} ${backgroundEase}, height .4s ${backgroundEase} ${backgroundDelay}`;
 
 
             mpbS(span1, span2, p1, p2);
@@ -109,7 +121,7 @@ function buttonHoverEffect(e, properties) {
                 const customProps = ['style', 'ease', 'duration', 'delay', 'strokeColor'];
 
                 const ease = getProperty(properties.ease, 'ease');
-                const duration =  getProperty(properties.duration, '0.6s');
+                const duration = getProperty(properties.duration, '0.6s');
                 const delay = getProperty(properties.delay, '0');
                 const strokeColor = getProperty(properties.strokeColor, 'black');
 
