@@ -106,8 +106,12 @@ function buttonHoverEffect(e, properties) {
 
 
             if (properties.subStyle = 1) {
-
                 const customProps = ['style', 'ease', 'duration', 'delay', 'strokeColor'];
+
+                const ease = getProperty(properties.ease, 'ease');
+                const duration =  getProperty(properties.duration, '0.6s');
+                const delay = getProperty(properties.delay, '0');
+                const strokeColor = getProperty(properties.strokeColor, 'black');
 
 
                 const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -129,12 +133,12 @@ function buttonHoverEffect(e, properties) {
                 rect.setAttribute("height", "100%");
 
 
-                element.style.transitionTimingFunction = properties.ease || 'ease';
-                element.style.transitionDuration = properties.duration || '0.6s';
-                element.style.transitionDelay = properties.delay || '0';
+                element.style.transitionTimingFunction = ease;
+                element.style.transitionDuration = duration;
+                element.style.transitionDelay = delay;
 
 
-                rect.style.stroke = properties.strokeColor || 'black';
+                rect.style.stroke = strokeColor;
 
 
                 mpbS(svg, rect);
