@@ -254,7 +254,7 @@
 .totty-nav-toggler1>div>div:nth-child(2) span {
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: inherit;
     border-radius: 4px;
     position: absolute;
     transition-property: transform, opacity;
