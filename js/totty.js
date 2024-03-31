@@ -1,6 +1,7 @@
 const Totty = {
     "buttonHover": buttonHover,
-    "navHamburger": navHamburger
+    "navHamburger": navHamburger,
+    "animateSvg": animateSvg
 };
 
 function buttonHover(e, properties) {
@@ -237,6 +238,39 @@ function navHamburger(e, properties) {
             })
         }
     })
+}
+
+
+function animateSvg(tg) {
+  const trg = document.querySelectorAll(tg);
+
+  trg.forEach(target => {
+    target.onmousemove = e => {
+      const y = mapValue(e.layerY, [0, target.clientHeight], [0, 300]);
+      const x = mapValue(e.layerX, [0, target.clientWidth], [0, 400]);
+  
+      
+      gsap.to(target.querySelector("path"), {
+        attr: { d: `M10,150 Q${x+200},${y+150} 390,150` },
+        ease: "expo",
+      })
+    };
+  
+    target.onmouseleave = () => {
+      gsap.to(target.querySelector("path"), {
+        attr: { d: `M10,150 Q200,150 390,150` },
+        duration: 2,
+        ease: "elastic.out(1,0.3)",
+      })
+    }
+  });
+
+  function mapValue(inputValue, initialRange, finalRange) {
+    const [initialInputValue, finalInputValue] = initialRange;
+    const [initialOutputValue, finalOutputValue] = finalRange;
+    
+    return initialOutputValue + (inputValue - initialInputValue) * (finalOutputValue - initialOutputValue) / (finalInputValue - initialInputValue);
+  }
 }
 
 
