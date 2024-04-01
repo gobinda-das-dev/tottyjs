@@ -4,10 +4,10 @@ const Totty = {
     "animateSvg": animateSvg
 };
 
-const linkElement = document.createElement('link');
-linkElement.rel = 'stylesheet';
-linkElement.href = '../css/totty.css';
-document.head.appendChild(linkElement);
+const linkTotty = document.createElement('link');
+linkTotty.rel = 'stylesheet';
+linkTotty.href = 'https://gobinda-das-dev.github.io/tottyjs/css/totty.css';
+document.head.appendChild(linkTotty);
 
 function buttonHover(e, properties) {
     const elem = document.querySelectorAll(e);
