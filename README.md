@@ -8,7 +8,7 @@ Welcome to Totty.js, your gateway to a mesmerizing world of JavaScript-powered v
 
 1. [Introduction](#introduction)
 2. [Installation](#installation)
-3. [Cool Effects](#cool-effects)
+3. [Cool s](#cool-effects)
    - Button Hover
 4. [Table of Properties](#table-of-properties)
 
@@ -31,17 +31,29 @@ Use `JAVASCRIP CDN`.
 ```
 
 
-## Cool Effects
+## Cool s
 ### Button Hover
 
 The feature creates a smooth button hover effect, creating an engaging user experience.
 
 ```javascript
-Totty.buttonHoverEffect(".your-btn", {
-    style: 1,   // total 2 styles available
+Totty.buttonHover(".your-btn", {
+    style: 1,   // total 3 styles available
     color: "gold",
     backgroundColor: "royalblue",
     backgroundEase: "cubic-bezier(0.19, 1, 0.22, 1)",
+});
+```
+### Nav Hamberger
+
+Use it to create a smooth and subtle navigation hamburger menu.
+
+```javascript
+Totty.navHamburger(".your-nav", {
+    style: 1,   // total 1 style available
+    color: "black",
+    backgroundColor: "red",
+    ease: "ease-in-out",
 });
 ```
 
@@ -53,16 +65,30 @@ Totty.buttonHoverEffect(".your-btn", {
 
 
 ## Table of Properties
-|                      | *buttonHoverEffect*  |                                   |                                                   |
+|                      | *buttonHover(effect)*|                                   |                                                   |
 | -------------------- | -------------------- | --------------------------------- | ------------------------------------------------- |
-| Option               | Type                 | Default                           | Description                                       |
+| Property             | Type                 | Default                           | Description                                       |
+| `style`              | `number`             | `1`                               | Style of button hover effect. (3 styles available)|
 | `color`              | `string`             | `gold`                            | Color of text inside the button.                  |
 | `colorFrom`          | `string`             | `white`                           | Color of text that comes from top.                |
 | `backgroundColor`    | `string`             | `royalblue`                       | Color of the background that comes from bottom.   |
-| `ease`               | `string`             | `ease-in-out`                     | easeing of the texts that.                        |
-| `backgroundEase`     | `string`             | `cubic-bezier(0.19, 1, 0.22, 1)`  | easing of background that comes from bottom.      |
-| `duration`           | `string`             | `.5s`                             | duration of texts transition.                     |
-| `backgroundDuration` | `string`             | `1s`                              | duration of backgroundColor.                      |
-| `delay`              | `string`             | `0s`                              | delay of text transition.                         |
-| `backgroundDelay`    | `string`             | `1s`                              | delay of background transition.                   |
-| `strokeColor`        | `string`             | `black`                           | color of border of style3(1) buttons.             |
+| `ease`               | `string`             | `ease-in-out`                     | primary easing.                                   |
+| `backgroundEase`     | `string`             | `cubic-bezier(0.19, 1, 0.22, 1)`  | secondary easing (if any).                        |
+| `duration`           | `string`             | `0.5s`                            | duration of primary ease.                         |
+| `backgroundDuration` | `string`             | `1s`                              | duration of secondary ease (if any).              |
+| `delay`              | `string`             | `0s`                              | delay primary transition.                         |
+| `backgroundDelay`    | `string`             | `1s`                              | delay secondary transition (if any).              |
+| `strokeColor`        | `string`             | `black`                           | color of border of style3 buttons.                |
+<hr />
+
+|                      |*navHamburger(effect)*|                                   |                                                   |
+| -------------------- | -------------------- | --------------------------------- | ------------------------------------------------- |
+| Property             | Type                 | Default                           | Description                                       |
+| `style`              | `number`             | `1`                               | Style of button hover effect. (1 styles available)|
+| `color`              | `string`             | `black`                           | Default color of nav sticks.                      |
+| `colorTo`            | `string`             | `red`                             | Changed color of sticks when hovered.             |
+| `ease`               | `string`             | `ease`                            | default easing.                                   |
+| `duration`           | `string`             | `0.4s`                            | duration of ease.                                 |
+| `delay`              | `string`             | `0s`                              | delay of transition.                              |
+| `height`             | `string`             | `2px`                             | height of each nav sticks.                        |
+| `width`              | `string`             | `36px`                            | width of each nav sticks.                         |
