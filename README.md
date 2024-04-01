@@ -14,18 +14,7 @@ Welcome to Totty.js, your gateway to a mesmerizing world of JavaScript-powered v
 
 
 ## Installation
-
-CDN  **of** `CSS`.
-
-```html
-<link rel="stylesheet" href="https://gobinda-das-dev.github.io/tottyjs/css/totty.css">
-```
-
-
----
-
-Use `JAVASCRIP CDN`.
-
+Use `CDN`.
 ```html
 <script src="https://gobinda-das-dev.github.io/tottyjs/js/totty.js"></script>
 ```
