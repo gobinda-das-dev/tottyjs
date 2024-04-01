@@ -4,6 +4,11 @@ const Totty = {
     "animateSvg": animateSvg
 };
 
+const linkElement = document.createElement('link');
+linkElement.rel = 'stylesheet';
+linkElement.href = '../css/totty.css';
+document.head.appendChild(linkElement);
+
 function buttonHover(e, properties) {
     const elem = document.querySelectorAll(e);
 
