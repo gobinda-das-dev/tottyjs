@@ -1,13 +1,75 @@
 const Totty = {
+    "animateSvg": animateSvg,
     "buttonHover": buttonHover,
     "navHamburger": navHamburger,
-    "animateSvg": animateSvg
 };
 
 const linkTotty = document.createElement('link');
 linkTotty.rel = 'stylesheet';
 linkTotty.href = 'https://gobinda-das-dev.github.io/tottyjs/css/totty.css';
 document.head.appendChild(linkTotty);
+
+function animateSvg(target, options = {}) {
+    if (typeof gsap === 'undefined') {
+        console.warn("GSAP is not defined. Make sure to include GSAP library by either using a CDN or importing it from GSAP.");
+        return;
+    }
+
+    const defaultOptions = {
+        ease: "elastic.out(1,0.3)",
+        duration: 2,
+        offsetLeft: 0,
+        offsetRight: 0,
+        xMultiplier: 1,
+        yMultiplier: 1
+    };
+
+    const {
+        ease,
+        duration,
+        offsetLeft,
+        offsetRight,
+        xMultiplier,
+        yMultiplier
+    } = { ...defaultOptions, ...options };
+
+    // Validate target
+    const trg = document.querySelectorAll(target);
+    if (trg.length === 0) {
+        console.error("Target not found.");
+        return;
+    }
+
+    trg.forEach(targetElement => {
+        const { height: sh, width: sw } = targetElement.getBoundingClientRect();
+        gsap.set(targetElement.querySelector("path"), { attr: { d: `M${offsetLeft},${sh / 2} Q${sw / 2},${sh / 2} ${sw - offsetRight},${sh / 2}` } });
+
+        targetElement.onmousemove = e => {
+            const y = mapValue(e.offsetY, [0, sh], [-sh * (yMultiplier - 1), sh * yMultiplier]);
+            const x = mapValue(e.offsetX, [0, sw], [-sw * (xMultiplier - 1), sw * xMultiplier]);
+
+            gsap.to(targetElement.querySelector("path"), {
+                attr: { d: `M${offsetLeft},${sh / 2} Q${x},${y} ${sw - offsetRight},${sh / 2}` },
+                ease: "expo",
+            });
+        };
+
+        targetElement.onmouseleave = () => {
+            gsap.to(targetElement.querySelector("path"), {
+                attr: { d: `M${offsetLeft},${sh / 2} Q${sw / 2},${sh / 2} ${sw - offsetRight},${sh / 2}` },
+                duration: duration,
+                ease: ease,
+            });
+        };
+    });
+
+    function mapValue(inputValue, initialRange, finalRange) {
+        const [initialInputValue, finalInputValue] = initialRange;
+        const [initialOutputValue, finalOutputValue] = finalRange;
+
+        return initialOutputValue + (inputValue - initialInputValue) * (finalOutputValue - initialOutputValue) / (finalInputValue - initialInputValue);
+    }
+}
 
 function buttonHover(e, properties) {
     const elem = document.querySelectorAll(e);
@@ -243,39 +305,6 @@ function navHamburger(e, properties) {
             })
         }
     })
-}
-
-
-function animateSvg(tg) {
-  const trg = document.querySelectorAll(tg);
-
-  trg.forEach(target => {
-    target.onmousemove = e => {
-      const y = mapValue(e.layerY, [0, target.clientHeight], [0, 300]);
-      const x = mapValue(e.layerX, [0, target.clientWidth], [0, 400]);
-  
-      
-      gsap.to(target.querySelector("path"), {
-        attr: { d: `M10,150 Q${x+200},${y+150} 390,150` },
-        ease: "expo",
-      })
-    };
-  
-    target.onmouseleave = () => {
-      gsap.to(target.querySelector("path"), {
-        attr: { d: `M10,150 Q200,150 390,150` },
-        duration: 2,
-        ease: "elastic.out(1,0.3)",
-      })
-    }
-  });
-
-  function mapValue(inputValue, initialRange, finalRange) {
-    const [initialInputValue, finalInputValue] = initialRange;
-    const [initialOutputValue, finalOutputValue] = finalRange;
-    
-    return initialOutputValue + (inputValue - initialInputValue) * (finalOutputValue - initialOutputValue) / (finalInputValue - initialInputValue);
-  }
 }
 
 
