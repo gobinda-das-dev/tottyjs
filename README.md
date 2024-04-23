@@ -9,7 +9,7 @@ Welcome to Totty.js, your gateway to a mesmerizing world of JavaScript-powered v
 1. [Introduction](#introduction)
 2. [Installation](#installation)
 3. [Cool effects](#cool-effects)
-   - Button Hover
+   - Svg Line
 4. [Table of Properties](#table-of-properties)
 
 
@@ -27,7 +27,7 @@ Use `CDN`.
 
 
 ## Cool effects
-### Button Hover
+### Svg Line
 
 The feature creates a smooth button hover effect, creating an engaging user experience.
 
