@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+  background-size: cover;
+  background-image: url(https://images.pexels.com/photos/1111597/pexels-photo-1111597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+}
+
+#svg-animation {
+  background-color: rgba(255, 255, 255, 0.05);
+  width: fit-content;
+  text-align: center;
+  padding: 2vw;
+  color: white;
+  margin: 2vw;
+  border-radius: 5px;
+  backdrop-filter: blur(100px);
+}
