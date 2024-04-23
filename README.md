@@ -16,7 +16,7 @@ Welcome to Totty.js, your gateway to a mesmerizing world of JavaScript-powered v
 ## Installation
 Use `CDN`.
 ```html
-<script src="https://gobinda-das-dev.github.io/tottyjs/js/totty.js"></script>
+<script src="https://tottyjs.netlify.app/js/totty.js"></script>
 ```
 ## Required Libraries
 ```html
