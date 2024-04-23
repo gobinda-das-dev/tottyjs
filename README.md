@@ -39,7 +39,7 @@ Totty.animateSvg("your-svg", {
     offsetRight: 10,
 });
 ```
-
+![Curve Effect](https://raw.githubusercontent.com/gobinda-das-dev/tottyjs/main/examples/curveEffect.gif)
 
 
 
