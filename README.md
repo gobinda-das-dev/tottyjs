@@ -32,8 +32,8 @@ Use `CDN`.
 The feature creates a smooth button hover effect, creating an engaging user experience.
 
 ```javascript
-// select your svg path
-Totty.animateSvg("your-svg-path", {
+// select your svg (which has path inside)
+Totty.animateSvg("your-svg", {
     ease: "elastic.out(1,0.3)",
     offsetLeft: 10,
     offsetRight: 10,
