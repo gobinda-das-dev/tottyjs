@@ -31,9 +31,15 @@ Use `CDN`.
 
 The feature creates a smooth button hover effect, creating an engaging user experience.
 
+```html
+<!-- Example Path -->
+<svg id="curve">
+   <path d="M10,150 Q200,150 390,150" fill="none" stroke="#000" stroke-width="6"/>
+</svg>
+```
 ```javascript
 // select your svg (which has path inside)
-Totty.animateSvg("your-svg", {
+Totty.animateSvg("#curve", {
     ease: "elastic.out(1,0.3)",
     offsetLeft: 10,
     offsetRight: 10,
