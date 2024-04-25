@@ -11,6 +11,8 @@ Welcome to Totty.js, your gateway to a mesmerizing world of JavaScript-powered v
 3. [Cool effects](#cool-effects)
    - Svg Line
 4. [Table of Properties](#table-of-properties)
+5. Examples
+   - <a href="https://codepen.io/gobinda-das-dev/pen/YzMdRWg" target="_blank">Svg Line</a>
 
 
 ## Installation
