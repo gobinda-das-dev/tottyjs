@@ -57,9 +57,9 @@ Totty.animateSvg("#curve", {
 |                      | *animateSvg*         |                                   |                                                   |
 | -------------------- | -------------------- | --------------------------------- | ------------------------------------------------- |
 | Property             | Type                 | Default                           | Description                                       |
-| `ease`               | `string`             | `elastic.out(1,0.3)`              | Out ease that gives it a elestic effet.           |
-| `duration`           | `number`             | `2`                               | Duration at of out ease.                          |
-| `offsetLeft`         | `number`             | `0`                               | Distance from left.                               |
-| `offsetRight`        | `number`             | `0`                               | Distance from right.                              |
+| `ease`               | `string`             | `elastic.out(1,0.3)`              | Ease that gives it a elestic effet.               |
+| `duration`           | `number`             | `2`                               | Duration of ease.                                 |
+| `offsetLeft`         | `number`             | `0`                               | Distance from left (respective to SVG).           |
+| `offsetRight`        | `number`             | `0`                               | Distance from right (respective to SVG).          |
 | `xMultiplier`        | `number`             | `1`                               | Left and right movement multliplier.              |
 | `yMultiplier`        | `number`             | `1`                               | Top and bottom movement multiplier.               |
