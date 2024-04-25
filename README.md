@@ -12,7 +12,7 @@ Welcome to Totty.js, your gateway to a mesmerizing world of JavaScript-powered v
    - Svg Line
 4. [Table of Properties](#table-of-properties)
 5. Examples
-   - <a href="https://codepen.io/gobinda-das-dev/pen/YzMdRWg" target="_blank">Svg Line</a>
+   - [Svg Line](https://codepen.io/gobinda-das-dev/pen/YzMdRWg)
 
 
 ## Installation
