@@ -10,9 +10,11 @@ Welcome to Totty.js, your gateway to a mesmerizing world of JavaScript-powered v
 2. [Installation](#installation)
 3. [Cool effects](#cool-effects)
    - [Svg Line](#svg-line)
+   - [Sticky Button](#sticky-button)
 4. [Table of Properties](#table-of-properties)
 5. Examples
    - [Svg Line](https://codepen.io/gobinda-das-dev/pen/YzMdRWg)
+   - [Sticky Button](https://codepen.io/gobinda-das-dev/pen/ZEdNKLX)
 
 
 ## Installation
@@ -31,7 +33,28 @@ Use `CDN`.
 ## Cool effects
 ### Svg Line
 
-The feature creates a smooth button hover effect, creating an engaging user experience.
+The feature creates a bending effect when hovering an SVG path, creating an engaging user experience.
+
+```html
+<!-- Example Path -->
+<svg id="curve">
+   <path d="M10,150 Q200,150 390,150" fill="none" stroke="#000" stroke-width="6"/>
+</svg>
+```
+```javascript
+// select your svg (which has path inside)
+Totty.animateSvg("#curve", {
+    ease: "elastic.out(1,0.3)",
+    offsetLeft: 10,
+    offsetRight: 10,
+});
+```
+![Curve Effect](https://raw.githubusercontent.com/gobinda-das-dev/tottyjs/main/examples/curveEffect.gif)
+
+
+### Sticky Button
+
+This creates a smooth parallax when moving the mouse over the button.
 
 ```html
 <!-- Example Path -->
