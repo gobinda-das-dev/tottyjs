@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Totty js</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    hello
+    
+    <main class="h-screen w-full grid place-items-center">
+        <div data-make-sticky="parent" class="size-32 bg-pink-500 grid place-items-center">
+            <div data-make-sticky="child" class="size-1/2 bg-yellow-500"></div>
+        </div>
+    </main>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="./js/utils.js"></script>
     <script src="./js/totty.js"></script>
+    <script src="./js/example.js"></script>
 </body>
 </html>
