@@ -119,7 +119,7 @@ function animateMagnets() {
 
         children.forEach(child => {
             child.style.pointerEvents = 'none';
-            const childMag = child.dataset.stickyMagnitude || 0.5;
+            const childMag = child.dataset.stickyMagnitude || 0.3;
 
             makeSticky(magnetParent, child, childMag);
         })
