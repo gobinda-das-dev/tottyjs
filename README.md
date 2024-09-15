@@ -52,23 +52,24 @@ Totty.animateSvg("#curve", {
 ![Curve Effect](https://raw.githubusercontent.com/gobinda-das-dev/tottyjs/main/examples/curveEffect.gif)
 
 
+
+
 ### Sticky Button
 
-This creates a smooth parallax when moving the mouse over the button.
+This creates a smooth parallax sticky button effect.
 
-```html
-<!-- Example Path -->
-<svg id="curve">
-   <path d="M10,150 Q200,150 390,150" fill="none" stroke="#000" stroke-width="6"/>
-</svg>
-```
 ```javascript
-// select your svg (which has path inside)
-Totty.animateSvg("#curve", {
-    ease: "elastic.out(1,0.3)",
-    offsetLeft: 10,
-    offsetRight: 10,
-});
+// pass parent and children you want to move
+Totty.makeSticky('.element-to-hover', '.element-to-move', magnitude, ease);
+```
+
+or via data attribute:
+```html
+<div data-make-sticky>I am magnety!</div>
+```
+You can also pass element selector to data attribute:
+```html
+<div data-make-sticky="#stick-me">Magnety <div id="stick-me">me</div> magnet!</div>
 ```
 ![Curve Effect](https://raw.githubusercontent.com/gobinda-das-dev/tottyjs/main/examples/sticky.gif)
 
