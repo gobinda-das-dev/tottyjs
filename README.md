@@ -51,6 +51,7 @@ Totty.animateSvg("#curve", {
 ```
 ![Curve Effect](https://raw.githubusercontent.com/gobinda-das-dev/tottyjs/main/examples/curveEffect.gif)
 
+[example](https://codepen.io/gobinda-das-dev/pen/YzMdRWg)
 
 
 
@@ -67,11 +68,13 @@ or via data attribute:
 ```html
 <div data-make-sticky>I am magnety!</div>
 ```
-You can also pass element selector to data attribute:
+You can also pass the element selector to the data attribute:
 ```html
 <div data-make-sticky="#stick-me">Magnety <div id="stick-me">me</div> magnet!</div>
 ```
 ![Curve Effect](https://raw.githubusercontent.com/gobinda-das-dev/tottyjs/main/examples/sticky.gif)
+
+[example](https://codepen.io/gobinda-das-dev/pen/ZEdNKLX)
 
 
 
