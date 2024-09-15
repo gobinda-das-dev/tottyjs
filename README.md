@@ -70,7 +70,7 @@ Totty.animateSvg("#curve", {
     offsetRight: 10,
 });
 ```
-![Curve Effect](https://raw.githubusercontent.com/gobinda-das-dev/tottyjs/main/examples/curveEffect.gif)
+![Curve Effect](https://raw.githubusercontent.com/gobinda-das-dev/tottyjs/main/examples/sticky.gif)
 
 
 
