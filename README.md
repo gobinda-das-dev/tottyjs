@@ -66,11 +66,13 @@ Totty.makeSticky('.element-to-hover', '.element-to-move', magnitude, ease);
 
 or via data attribute:
 ```html
-<div data-make-sticky>I am magnety!</div>
+<div data-make-sticky data-sticky-magnitude="1">I am magnety!</div>
+<!-- more the magnitude more it will move (default is 0.5) -->
 ```
 You can also pass the element selector to the data attribute:
 ```html
 <div data-make-sticky="#stick-me">Magnety <div id="stick-me">me</div> magnet!</div>
+<!-- for children default magnitude is (0.3) -->
 ```
 Note: make sture to give the children ``pointer-events: none;``
 <br/>
