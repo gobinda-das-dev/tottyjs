@@ -72,6 +72,9 @@ You can also pass the element selector to the data attribute:
 ```html
 <div data-make-sticky="#stick-me">Magnety <div id="stick-me">me</div> magnet!</div>
 ```
+Note: make sture to give the children ``pointer-events: none;``
+<br/>
+<br/>
 ![Curve Effect](https://raw.githubusercontent.com/gobinda-das-dev/tottyjs/main/examples/sticky.gif)
 
 [example](https://codepen.io/gobinda-das-dev/pen/ZEdNKLX)
