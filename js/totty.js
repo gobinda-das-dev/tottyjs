@@ -6,9 +6,7 @@ const Totty = {
 const $ = (e, p = document) => p.querySelector(e);
 const $$ = (e, p = document) => p.querySelectorAll(e);
 
-function animateSvg(targets, options = {}) {
-    utils.showCdnError();
-    
+function animateSvg(targets, options = {}) {    
     const defaultOptions = {
         ease: "elastic.out(1,0.3)",
         duration: 2,
@@ -82,9 +80,7 @@ function animateSvg(targets, options = {}) {
     });
 }
 
-function makeSticky(elementToHover, elementToMove, magnitude = 0.5, ease) {
-    utils.showCdnError();
-    
+function makeSticky(elementToHover, elementToMove, magnitude = 0.5, ease) {    
     elementToHover.addEventListener('mousemove', (e) => {
         const x = (e.offsetX - elementToHover.clientWidth / 2) * magnitude;
         const y = (e.offsetY - elementToHover.clientHeight / 2) * magnitude;
@@ -108,6 +104,11 @@ function makeSticky(elementToHover, elementToMove, magnitude = 0.5, ease) {
 animateMagnets();
 
 function animateMagnets() {
+    if (typeof gsap === 'undefined') {
+        console.error("GSAP is not defined. Make sure to include GSAP library.");
+        return;
+    }
+    
     const magnetParents = $$('[data-make-sticky="parent"]');
 
     magnetParents.forEach(magnetParent => {
