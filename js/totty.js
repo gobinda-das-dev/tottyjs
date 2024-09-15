@@ -109,19 +109,21 @@ function animateMagnets() {
         return;
     }
     
-    const magnetParents = $$('[data-make-sticky="parent"]');
+    const magnets = $$('[data-make-sticky]');
+    
+    magnets.forEach(magnet => {
+        const childId = magnet.dataset.makeSticky;
+        const children = $$(childId, magnet);
 
-    magnetParents.forEach(magnetParent => {
-        const parentMag = magnetParent.dataset.stickyMagnitude || 0.5;
-        const children = $$('[data-make-sticky="child"]', magnetParent);
+        const parentMag = magnet.dataset.stickyMagnitude || 0.5;
 
-        makeSticky(magnetParent, magnetParent, parentMag);
+        makeSticky(magnet, magnet, parentMag);
 
         children.forEach(child => {
             child.style.pointerEvents = 'none';
             const childMag = child.dataset.stickyMagnitude || 0.3;
 
-            makeSticky(magnetParent, child, childMag);
+            makeSticky(magnet, child, childMag);
         })
     })
 }
